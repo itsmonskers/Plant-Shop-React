@@ -1,18 +1,17 @@
-// src/components/Header.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css"; // ✅ make sure this path is correct!
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
-      <h1>GreenHouse Co.</h1>
-      <nav>
-        <Link to="/products">Products</Link>
-        <Link to="/cart">Cart 🛒</Link>
+      <h1 className="logo">GreenHouse Co.</h1>
+      <nav className="nav-links">
+        <Link to="/products" className="nav-btn">Products</Link>
+        <Link to="/cart" className="nav-btn">Cart 🛒</Link>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
